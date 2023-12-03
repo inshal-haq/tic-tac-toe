@@ -30,6 +30,31 @@ body {
   align-items: center;
 }
 
+/* SHARED UTILITY */
+
+.hidden {
+  display: none !important;
+}
+
+.yellow {
+  color: var(--yellow);
+}
+
+.turquoise {
+  color: var(--turquoise);
+}
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.border {
+  border: 1px solid rgba(211, 211, 211, 0.4) !important;
+}
+
+/* GRID */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 80px);
@@ -93,7 +118,43 @@ body {
 /* ACTIONS */
 
 .actions {
-  background-color: var(--gray);
+  position: relative;
+}
+
+.actions-btn {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  color: white;
+  background-color: rgba(211, 211, 211, 0.05);
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+
+.actions .items {
+  position: absolute;
+  top: 60px;
+  right: 0px;
+  z-index: 10;
+
+  background-color: #203139;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+.actions .items button {
+  background-color: transparent;
+  color: white;
+  padding: 8px;
+}
+
+.actions .items button:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .square {
